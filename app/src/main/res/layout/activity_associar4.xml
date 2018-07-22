@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/holo_purple"
+    tools:context="com.example.anaplb.appAlpha.associar4Activity">
+
+    <Button
+        android:id="@+id/button33"
+        android:layout_width="113dp"
+        android:layout_height="86dp"
+        android:layout_marginEnd="99dp"
+        android:layout_marginStart="43dp"
+        android:fontFamily="casual"
+        android:onClick="escolhaA"
+        android:text="A"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/button34"
+        app:layout_constraintEnd_toStartOf="@+id/button34"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/button34" />
+
+    <Button
+        android:id="@+id/button34"
+        android:layout_width="113dp"
+        android:layout_height="86dp"
+        android:layout_marginBottom="17dp"
+        android:layout_marginEnd="16dp"
+        android:fontFamily="casual"
+        android:onClick="escolhaE"
+        android:text="E"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/button36"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/button33"
+        app:layout_constraintTop_toBottomOf="@+id/textView13" />
+
+    <Button
+        android:id="@+id/button35"
+        android:layout_width="113dp"
+        android:layout_height="86dp"
+        android:layout_marginEnd="99dp"
+        android:layout_marginStart="43dp"
+        android:fontFamily="casual"
+        android:onClick="escolhaI"
+        android:text="I"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/button36"
+        app:layout_constraintEnd_toStartOf="@+id/button36"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/button36" />
+
+    <Button
+        android:id="@+id/button36"
+        android:layout_width="113dp"
+        android:layout_height="86dp"
+        android:layout_marginBottom="21dp"
+        android:layout_marginEnd="16dp"
+        android:fontFamily="casual"
+        android:onClick="escolhaO"
+        android:text="O"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/button37"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/button35"
+        app:layout_constraintTop_toBottomOf="@+id/button34" />
+
+    <Button
+        android:id="@+id/button37"
+        android:layout_width="113dp"
+        android:layout_height="86dp"
+        android:layout_marginBottom="1dp"
+        android:onClick="escolhaU"
+        android:text="U"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button36" />
+
+    <android.support.v7.widget.AppCompatImageView
+        android:id="@+id/imageView6"
+        android:layout_width="0dp"
+        android:layout_height="159dp"
+        android:layout_marginBottom="27dp"
+        android:layout_marginEnd="42dp"
+        android:layout_marginStart="42dp"
+        app:layout_constraintBottom_toTopOf="@+id/textView13"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="VectorDrawableCompat" />
+
+    <TextView
+        android:id="@+id/textView13"
+        android:layout_width="350dp"
+        android:layout_height="63dp"
+        android:layout_marginBottom="28dp"
+        android:fontFamily="casual"
+        android:text="Com que letra o desenho começa?"
+        android:textAlignment="center"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/button34"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView6" />
+</android.support.constraint.ConstraintLayout>
