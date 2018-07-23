@@ -2,6 +2,7 @@ package com.example.anaplb.appAlpha;
 
 import android.content.ContentValues;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.database.sqlite.SQLiteDatabase;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -10,6 +11,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 
 import com.example.anaplb.appAlpha.helper.dbHelper;
@@ -24,6 +26,7 @@ public class primeiraActivity extends AppCompatActivity {
     private ArrayList<String> respostas = new ArrayList<String>();
     private ArrayList<String> letrasFaltando = new ArrayList<String>();
     private ArrayList<Integer> ids = new ArrayList<Integer>();
+    private SharedPreferences preferences;
 
 
     @Override
@@ -31,59 +34,25 @@ public class primeiraActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_primeira);
 
+        preferences = getSharedPreferences("firstRun", MODE_PRIVATE);
+
+        Log.i("tamanho da lista ", "-"+this.ids.size()+"");
+
         listasDAO listas = new listasDAO(getApplicationContext());
 
-        listas.salvandoComplete();
-
-        this.ids = listas.retornandoIdsCompletar();
-        this.nomes = listas.retornandoNomesCompletar();
-        this.respostas = listas.retornandoLetrasCompletar();
-        this.letrasFaltando = listas.retornandoLetrasFaltandoCompletar();
-
-
-        /*this.ids.add(R.drawable.ilha);
-        this.ids.add(R.drawable.cadeira);
-        this.ids.add(R.drawable.mesa);
-        this.ids.add(R.drawable.sol);
-        this.ids.add(R.drawable.urso);
-        this.ids.add(R.drawable.cachorro);
-        this.ids.add(R.drawable.fogueira);
-        this.ids.add(R.drawable.melancia);
-        this.ids.add(R.drawable.papagaio);
-        this.ids.add(R.drawable.onibus);
-
-        this.respostas.add("i");
-        this.respostas.add("a");
-        this.respostas.add("e");
-        this.respostas.add("o");
-        this.respostas.add("u");
-        this.respostas.add("a");
-        this.respostas.add("e");
-        this.respostas.add("i");
-        this.respostas.add("o");
-        this.respostas.add("u");
-
-        this.nomes.add("ILHA");
-        this.nomes.add("CADEIRA");
-        this.nomes.add("MESA");
-        this.nomes.add("SOL");
-        this.nomes.add("URSO");
-        this.nomes.add("CACHORRO");
-        this.nomes.add("FOGUEIRA");
-        this.nomes.add("MELANCIA");
-        this.nomes.add("PAPAGAIO");
-        this.nomes.add("ÔNIBUS");
-
-        this.letrasFaltando.add("_LHA");
-        this.letrasFaltando.add("C_DEIRA");
-        this.letrasFaltando.add("M_SA");
-        this.letrasFaltando.add("S_L");
-        this.letrasFaltando.add("_RSO");
-        this.letrasFaltando.add("C_CHORRO");
-        this.letrasFaltando.add("FOGU_IRA");
-        this.letrasFaltando.add("MELANC_A");
-        this.letrasFaltando.add("PAPAGAI_");
-        this.letrasFaltando.add("ÔNIB_S");*/
+        boolean teste = listas.testandoSeVazio();
+        if(teste == true) {
+            listas.salvandoComplete();
+            this.ids = listas.retornandoIdsCompletar();
+            this.nomes = listas.retornandoNomesCompletar();
+            this.respostas = listas.retornandoLetrasCompletar();
+            this.letrasFaltando = listas.retornandoLetrasFaltandoCompletar();
+        } else {
+            this.ids = listas.retornandoIdsCompletar();
+            this.nomes = listas.retornandoNomesCompletar();
+            this.respostas = listas.retornandoLetrasCompletar();
+            this.letrasFaltando = listas.retornandoLetrasFaltandoCompletar();
+        }
 
         this.numeroAleatorio = imagemAleatoria();
 
@@ -95,6 +64,7 @@ public class primeiraActivity extends AppCompatActivity {
         Log.i("random do on create1: ", "é "+this.numeroAleatorio+" esse");
 
     }
+
 
     private int imagemAleatoria() {
         Random gerador = new Random();

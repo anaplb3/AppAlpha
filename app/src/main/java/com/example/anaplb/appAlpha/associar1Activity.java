@@ -25,22 +25,16 @@ public class associar1Activity extends AppCompatActivity {
         setContentView(R.layout.activity_associar1);
 
         listasDAO listasDAO = new listasDAO(getApplicationContext());
-        listasDAO.salvandoAssociar();
 
-        this.letras = listasDAO.retornandoLetraAssociar();
-        this.ids = listasDAO.retornandoIdsAssociar();
-
-        /*this.ids.add(R.drawable.abelha);
-        this.ids.add(R.drawable.escova);
-        this.ids.add(R.drawable.indio);
-        this.ids.add(R.drawable.oculos);
-        this.ids.add(R.drawable.uva);
-
-        this.letras.add("a");
-        this.letras.add("e");
-        this.letras.add("i");
-        this.letras.add("o");
-        this.letras.add("u");*/
+        boolean teste = listasDAO.testandoSeVazio();
+        if(teste == true) {
+            listasDAO.salvandoAssociar();
+            this.letras = listasDAO.retornandoLetraAssociar();
+            this.ids = listasDAO.retornandoIdsAssociar();
+        } else {
+            this.letras = listasDAO.retornandoLetraAssociar();
+            this.ids = listasDAO.retornandoIdsAssociar();
+        }
 
         this.numeroAleatorio = imagemAleatoria();
 
