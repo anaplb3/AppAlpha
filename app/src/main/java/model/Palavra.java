@@ -13,6 +13,31 @@ public abstract class Palavra {
         this.idSom = idSom;
     }
 
+    public String getNome() {
+        return nome;
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+
+    public int getIdImagem() {
+        return idImagem;
+    }
+
+    public void setIdImagem(int idImagem) {
+        this.idImagem = idImagem;
+    }
+
+    public int getIdSom() {
+        return idSom;
+    }
+
+    public void setIdSom(int idSom) {
+        this.idSom = idSom;
+    }
+
     public abstract ArrayList<Palavra> recursos();
+
 
 }

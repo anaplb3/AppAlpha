@@ -6,9 +6,6 @@ import com.example.anaplb.letrando.R;
 import java.util.ArrayList;
 
 public class PalavraCidade extends Palavra{
-    private String nome;
-    private int idImagem;
-    private int idSom;
 
     public PalavraCidade(String nome, int idImagem, int idSom) {
         super(nome, idImagem, idSom);
@@ -34,7 +31,6 @@ public class PalavraCidade extends Palavra{
         ArrayList<String> nomes = new ArrayList<>();
 
         nomes.add("aeroporto");
-        nomes.add("cidade");
         nomes.add("escola");
         nomes.add("hospital");
         nomes.add("igreja");
@@ -52,7 +48,6 @@ public class PalavraCidade extends Palavra{
 
 
         imgs.add(R.drawable.aeroporto);
-        imgs.add(R.drawable.cidade);
         imgs.add(R.drawable.escola);
         imgs.add(R.drawable.hospital);
         imgs.add(R.drawable.igreja);
