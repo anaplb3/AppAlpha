@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/holo_purple"
+    tools:context="com.example.anaplb.letrando.activities.temaActivity"
+    tools:layout_editor_absoluteY="25dp">
+
+    <ImageButton
+        android:id="@+id/imageButtonCidade"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="379dp"
+        android:layout_marginEnd="28dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="28dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="7dp"
+        android:adjustViewBounds="false"
+        android:cropToPadding="false"
+        android:scaleType="fitXY"
+        app:layout_constraintBottom_toTopOf="@+id/btn_natureza"
+        app:layout_constraintEnd_toStartOf="@+id/imageButtonFruta"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/cidade" />
+
+    <ImageButton
+        android:id="@+id/imageButtonFruta"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="204dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="7dp"
+        android:scaleType="fitXY"
+        app:layout_constraintBottom_toTopOf="@+id/btn_comida"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/imageButtonCidade"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/frutas" />
+
+    <ImageButton
+        android:id="@+id/imageButtonCor"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="34dp"
+        android:layout_marginEnd="56dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="56dp"
+        android:layout_marginStart="30dp"
+        android:scaleType="fitXY"
+        app:layout_constraintBottom_toTopOf="@+id/imageButtonNatureza"
+        app:layout_constraintEnd_toEndOf="@+id/imageButtonCidade"
+        app:layout_constraintEnd_toStartOf="@+id/btn_comida"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_cidade"
+        app:srcCompat="@drawable/cores" />
+
+    <ImageButton
+        android:id="@+id/imageButtonComida"
+        android:layout_width="149dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="33dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:scaleType="fitXY"
+        app:layout_constraintBottom_toTopOf="@+id/imageButtonCozinha"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btn_cores"
+        app:layout_constraintTop_toBottomOf="@+id/btn_frutas"
+        app:srcCompat="@drawable/comida" />
+
+    <ImageButton
+        android:id="@+id/imageButtonNatureza"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="45dp"
+        android:layout_marginEnd="34dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="34dp"
+        android:layout_marginStart="30dp"
+        android:scaleType="fitXY"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/imageButtonCozinha"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageButtonCor"
+        app:srcCompat="@drawable/natureza" />
+
+    <ImageButton
+        android:id="@+id/imageButtonCozinha"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="45dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:scaleType="fitXY"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/imageButtonNatureza"
+        app:layout_constraintTop_toBottomOf="@+id/imageButtonComida"
+        app:srcCompat="@drawable/cozinha" />
+
+    <Button
+        android:id="@+id/btn_cidade"
+        android:layout_width="105dp"
+        android:layout_height="37dp"
+        android:layout_marginBottom="25dp"
+        android:layout_marginEnd="81dp"
+        android:layout_marginLeft="55dp"
+        android:layout_marginRight="81dp"
+        android:layout_marginStart="55dp"
+        android:onClick="botaoCidade"
+        android:text="Cidade"
+        app:layout_constraintBottom_toTopOf="@+id/imageButtonCor"
+        app:layout_constraintEnd_toStartOf="@+id/btn_frutas"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageButtonCidade" />
+
+    <Button
+        android:id="@+id/btn_frutas"
+        android:layout_width="105dp"
+        android:layout_height="37dp"
+        android:layout_marginBottom="25dp"
+        android:layout_marginEnd="38dp"
+        android:layout_marginRight="38dp"
+        android:onClick="botaoFruta"
+        android:text="Frutas"
+        app:layout_constraintBottom_toTopOf="@+id/imageButtonComida"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btn_cidade"
+        app:layout_constraintTop_toBottomOf="@+id/imageButtonFruta" />
+
+    <Button
+        android:id="@+id/btn_cores"
+        android:layout_width="0dp"
+        android:layout_height="37dp"
+        android:layout_marginBottom="134dp"
+        android:layout_marginEnd="53dp"
+        android:layout_marginLeft="55dp"
+        android:layout_marginRight="53dp"
+        android:layout_marginStart="55dp"
+        android:layout_marginTop="136dp"
+        android:onClick="botaoCor"
+        android:text="Cores"
+        app:layout_constraintBottom_toBottomOf="@+id/imageButtonNatureza"
+        app:layout_constraintEnd_toStartOf="@+id/imageButtonComida"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/imageButtonCor" />
+
+    <Button
+        android:id="@+id/btn_comida"
+        android:layout_width="105dp"
+        android:layout_height="37dp"
+        android:layout_marginBottom="138dp"
+        android:layout_marginEnd="38dp"
+        android:layout_marginRight="38dp"
+        android:onClick="botaoComida"
+        android:text="Comida"
+        app:layout_constraintBottom_toTopOf="@+id/btn_cozinha"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/imageButtonCor"
+        app:layout_constraintTop_toBottomOf="@+id/imageButtonFruta" />
+
+    <Button
+        android:id="@+id/btn_natureza"
+        android:layout_width="105dp"
+        android:layout_height="37dp"
+        android:layout_marginBottom="7dp"
+        android:layout_marginEnd="88dp"
+        android:layout_marginLeft="48dp"
+        android:layout_marginRight="88dp"
+        android:layout_marginStart="48dp"
+        android:onClick="botaoNatureza"
+        android:text="Natureza"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/btn_cozinha"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageButtonCidade" />
+
+    <Button
+        android:id="@+id/btn_cozinha"
+        android:layout_width="105dp"
+        android:layout_height="37dp"
+        android:layout_marginBottom="7dp"
+        android:layout_marginEnd="38dp"
+        android:layout_marginRight="38dp"
+        android:onClick="botaoCozinha"
+        android:text="Cozinha"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btn_natureza"
+        app:layout_constraintTop_toBottomOf="@+id/btn_comida" />
+
+</android.support.constraint.ConstraintLayout>

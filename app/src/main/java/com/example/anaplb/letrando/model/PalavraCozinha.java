@@ -1,4 +1,7 @@
-package model;
+package com.example.anaplb.letrando.model;
+
+import android.annotation.SuppressLint;
+import android.os.Parcel;
 
 import com.example.anaplb.letrando.R;
 
@@ -8,6 +11,10 @@ public class PalavraCozinha extends Palavra{
 
     public PalavraCozinha(String nome, int idImagem, int idSom) {
         super(nome, idImagem, idSom);
+    }
+
+    public PalavraCozinha() {
+        super("", 0, 0);
     }
 
     @Override
@@ -49,7 +56,7 @@ public class PalavraCozinha extends Palavra{
         imgs.add(R.drawable.faca);
         imgs.add(R.drawable.fogao);
         imgs.add(R.drawable.garfo);
-        imgs.add(R.drawable.GELADEIRA);
+        imgs.add(R.drawable.geladeira);
         imgs.add(R.drawable.mesa);
         imgs.add(R.drawable.sink);
         imgs.add(R.drawable.prato);
@@ -58,4 +65,5 @@ public class PalavraCozinha extends Palavra{
 
         return imgs;
     }
+
 }

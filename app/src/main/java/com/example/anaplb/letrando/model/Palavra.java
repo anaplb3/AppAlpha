@@ -1,4 +1,4 @@
-package model;
+package com.example.anaplb.letrando.model;
 
 import java.util.ArrayList;
 
@@ -38,6 +38,13 @@ public abstract class Palavra {
     }
 
     public abstract ArrayList<Palavra> recursos();
+
+    public void checando() {};
+
+    public abstract ArrayList<String> retornandoNomes();
+
+    public abstract ArrayList<Integer> retornandoImagens();
+
 
 
 }

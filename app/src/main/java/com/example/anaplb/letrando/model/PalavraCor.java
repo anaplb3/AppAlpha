@@ -1,13 +1,21 @@
-package model;
+package com.example.anaplb.letrando.model;
+
+import android.annotation.SuppressLint;
+import android.os.Parcel;
 
 import com.example.anaplb.letrando.R;
 
 import java.util.ArrayList;
 
+
 public class PalavraCor extends Palavra{
 
     public PalavraCor(String nome, int idImagem, int idSom) {
         super(nome, idImagem, idSom);
+    }
+
+    public PalavraCor() {
+        super("", 0, 0);
     }
 
     @Override
@@ -57,4 +65,5 @@ public class PalavraCor extends Palavra{
 
         return imgs;
     }
+
 }

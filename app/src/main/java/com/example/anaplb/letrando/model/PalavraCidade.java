@@ -1,7 +1,9 @@
-package model;
+package com.example.anaplb.letrando.model;
+
 
 
 import com.example.anaplb.letrando.R;
+import com.example.anaplb.letrando.properties.Manipulador;
 
 import java.util.ArrayList;
 
@@ -11,21 +13,38 @@ public class PalavraCidade extends Palavra{
         super(nome, idImagem, idSom);
     }
 
+    public PalavraCidade() {
+        super("", 0, 0);
+    }
 
     @Override
     public ArrayList<Palavra> recursos() {
+        Manipulador mani = new Manipulador("properties/cidade.properties");
+
+
+
         ArrayList<String> nomes = retornandoNomes();
         ArrayList<Integer> imgs = retornandoImagens();
         ArrayList<Palavra> palavras = new ArrayList<>();
 
-        for(int i = 0; i < nomes.size(); i++) {
-            Palavra p = new PalavraCidade(nomes.get(i), imgs.get(i), 0);
+        for(int i = 0; i < 9; i++) {
+            try {
+                mani.setandoAtributos(i);
+            } catch(Exception e) {
+                e.getMessage();
+            }
+
+            String nome = nomes.get(i);
+            int img = imgs.get(i);
+
+            Palavra p = new PalavraCidade(nome, img, 0);
 
             palavras.add(p);
         }
 
         return palavras;
     }
+
 
     public ArrayList<String> retornandoNomes() {
         ArrayList<String> nomes = new ArrayList<>();
@@ -59,4 +78,5 @@ public class PalavraCidade extends Palavra{
 
         return imgs;
     }
+
 }
