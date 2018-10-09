@@ -3,7 +3,6 @@ package com.example.anaplb.letrando.activities;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 
@@ -33,8 +32,9 @@ public class temaActivity extends AppCompatActivity {
         Intent intent = new Intent(getApplicationContext(), DesafioActivity.class);
         intent.putExtra("palavras", p.retornandoNomes());
         intent.putExtra("imagens", p.retornandoImagens());
+        intent.putExtra("pontos", 0);
+        intent.putExtra("contador", 0);
         startActivity(intent);
-        finish();
 
     }
 

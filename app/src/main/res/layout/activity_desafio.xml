@@ -4,28 +4,112 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@android:color/holo_purple"
     tools:context=".activities.DesafioActivity">
 
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="143dp"
-        android:layout_height="0dp"
+        android:layout_width="169dp"
+        android:layout_height="128dp"
         android:layout_marginBottom="48dp"
         android:layout_marginTop="57dp"
         app:layout_constraintBottom_toTopOf="@+id/textView"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.502"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@android:drawable/sym_def_app_icon" />
 
     <TextView
         android:id="@+id/textView"
-        android:layout_width="125dp"
+        android:layout_width="158dp"
         android:layout_height="42dp"
         android:layout_marginBottom="308dp"
         android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.501"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+    <Button
+        android:id="@+id/buttonA"
+        android:layout_width="113dp"
+        android:layout_height="60dp"
+        android:layout_marginBottom="40dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginStart="16dp"
+        android:onClick="botaoA"
+        android:text="A"
+        android:textSize="30sp"
+        android:typeface="serif"
+        app:layout_constraintBottom_toTopOf="@+id/buttonI"
+        app:layout_constraintEnd_toEndOf="@+id/buttonI"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/buttonI" />
+
+    <Button
+        android:id="@+id/buttonE"
+        android:layout_width="113dp"
+        android:layout_height="60dp"
+        android:layout_marginBottom="40dp"
+        android:onClick="botaoE"
+        android:text="E"
+        android:textSize="30sp"
+        android:typeface="serif"
+        app:layout_constraintBottom_toTopOf="@+id/buttonO"
+        app:layout_constraintEnd_toEndOf="@+id/buttonO"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/buttonO" />
+
+    <Button
+        android:id="@+id/buttonI"
+        android:layout_width="113dp"
+        android:layout_height="60dp"
+        android:layout_marginBottom="16dp"
+        android:layout_marginEnd="118dp"
+        android:layout_marginLeft="24dp"
+        android:layout_marginRight="118dp"
+        android:layout_marginStart="24dp"
+        android:onClick="botaoI"
+        android:text="I"
+        android:textSize="30sp"
+        android:typeface="serif"
+        app:layout_constraintBottom_toTopOf="@+id/buttonU"
+        app:layout_constraintEnd_toStartOf="@+id/buttonO"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/buttonO"
+        android:layout_width="113dp"
+        android:layout_height="60dp"
+        android:layout_marginBottom="16dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginRight="32dp"
+        android:onClick="botaoO"
+        android:text="O"
+        android:textSize="30sp"
+        android:typeface="serif"
+        app:layout_constraintBottom_toTopOf="@+id/buttonU"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/buttonU" />
+
+    <Button
+        android:id="@+id/buttonU"
+        android:layout_width="109dp"
+        android:layout_height="71dp"
+        android:layout_marginBottom="48dp"
+        android:layout_marginEnd="120dp"
+        android:layout_marginLeft="1dp"
+        android:layout_marginRight="120dp"
+        android:layout_marginStart="1dp"
+        android:onClick="botaoU"
+        android:text="U"
+        android:textSize="30sp"
+        android:typeface="serif"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/buttonI" />
 </android.support.constraint.ConstraintLayout>

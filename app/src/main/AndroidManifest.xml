@@ -17,7 +17,8 @@
             </intent-filter>
         </activity>
         <activity android:name=".activities.temaActivity" />
-        <activity android:name=".activities.DesafioActivity"></activity>
+        <activity android:name=".activities.DesafioActivity" />
+        <activity android:name=".activities.PontuacaoActivity"></activity>
     </application>
 
 </manifest>

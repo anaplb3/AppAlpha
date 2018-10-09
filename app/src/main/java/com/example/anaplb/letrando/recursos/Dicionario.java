@@ -9,6 +9,7 @@ public class Dicionario {
     private ArrayList<String> palavras;
     private Random gerador;
     private int indice;
+    private char vogal;
 
     public Dicionario(ArrayList<String> palavras) {
         this.palavras = palavras;
@@ -48,7 +49,7 @@ public class Dicionario {
         boolean achou = false;
 
         do {
-            char vogal = vogalEscolhida();
+            vogal = vogalEscolhida();
             for(int iChar = 0; iChar < word.length(); iChar++) {
 
                 if(vogal == word.charAt(iChar)) {
@@ -62,5 +63,8 @@ public class Dicionario {
         return nome;
     }
 
+    public char getVogal() {
+        return this.vogal;
+    }
 
 }
