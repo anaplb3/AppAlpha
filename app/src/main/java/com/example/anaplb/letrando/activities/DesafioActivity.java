@@ -36,11 +36,6 @@ public class DesafioActivity extends AppCompatActivity {
         imgs = dados.getIntegerArrayList("imagens");
         sons = dados.getIntegerArrayList("audio");
 
-        Log.i("tamanho ", ""+palavras.size());
-        Log.i("tamanho ", ""+imgs.size());
-        Log.i("tamanho ", ""+sons.size());
-
-
         Dicionario gerador = new Dicionario(palavras);
 
         indice = gerador.getIndice();
