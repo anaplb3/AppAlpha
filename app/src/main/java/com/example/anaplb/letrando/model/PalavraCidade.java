@@ -26,6 +26,7 @@ public class PalavraCidade extends Palavra{
         ArrayList<String> nomes = retornandoNomes();
         ArrayList<Integer> imgs = retornandoImagens();
         ArrayList<Palavra> palavras = new ArrayList<>();
+        ArrayList<Integer> audios = retornandoAudios();
 
         for(int i = 0; i < 9; i++) {
             try {
@@ -36,8 +37,9 @@ public class PalavraCidade extends Palavra{
 
             String nome = nomes.get(i);
             int img = imgs.get(i);
+            int som = audios.get(i);
 
-            Palavra p = new PalavraCidade(nome, img, 0);
+            Palavra p = new PalavraCidade(nome, img, som);
 
             palavras.add(p);
         }
@@ -77,6 +79,24 @@ public class PalavraCidade extends Palavra{
         imgs.add(R.drawable.zoologico);
 
         return imgs;
+    }
+
+    @Override
+    public ArrayList<Integer> retornandoAudios() {
+        ArrayList<Integer> audio = new ArrayList<>();
+
+        audio.add(R.raw.aeroporto);
+        audio.add(R.raw.escola);
+        audio.add(R.raw.hospital);
+        audio.add( R.raw.igreja);
+        audio.add(R.raw.museu);
+        audio.add(R.raw.praia);
+        audio.add(R.raw.restaurante);
+        audio.add(R.raw.shopping);
+        audio.add(R.raw.zoo);
+
+        return audio;
+
     }
 
 }

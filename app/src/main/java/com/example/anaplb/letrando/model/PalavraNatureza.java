@@ -20,10 +20,11 @@ public class PalavraNatureza extends Palavra {
     public ArrayList<Palavra> recursos() {
         ArrayList<String> nomes = retornandoNomes();
         ArrayList<Integer> imgs = retornandoImagens();
+        ArrayList<Integer> audio = retornandoAudios();
         ArrayList<Palavra> palavras = new ArrayList<>();
 
         for(int i = 0; i < nomes.size(); i++) {
-            Palavra p = new PalavraNatureza(nomes.get(i), imgs.get(i), 0);
+            Palavra p = new PalavraNatureza(nomes.get(i), imgs.get(i), audio.get(i));
 
             palavras.add(p);
         }
@@ -67,6 +68,27 @@ public class PalavraNatureza extends Palavra {
         imgs.add(R.drawable.vaca);
 
         return imgs;
+    }
+
+    @Override
+    public ArrayList<Integer> retornandoAudios() {
+        ArrayList<Integer> audio = new ArrayList<>();
+
+        audio.add(R.raw.abelha);
+        audio.add(R.raw.arvore);
+        audio.add(R.raw.bode);
+        audio.add( R.raw.flor);
+        audio.add(R.raw.galo);
+        audio.add(R.raw.gato);
+        audio.add(R.raw.lua);
+        audio.add(R.raw.nuvem);
+        audio.add(R.raw.praia);
+        audio.add(R.raw.rio);
+        audio.add(R.raw.sol);
+        audio.add(R.raw.vaca);
+
+        return audio;
+
     }
 
 }

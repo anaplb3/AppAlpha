@@ -42,13 +42,15 @@ public class ChecandoRespostaCerta {
         return intent;
     }
 
-    public Intent salvandoDados(ArrayList<String> palavras, ArrayList<Integer> imgs, Intent intent, int indice, int pontos) {
+    public Intent salvandoDados(ArrayList<String> palavras, ArrayList<Integer> imgs, ArrayList<Integer> sons, Intent intent, int indice, int pontos) {
         palavras.remove(indice);
         imgs.remove(indice);
+        sons.remove(indice);
 
         intent.putExtra("palavras", palavras);
         intent.putExtra("imagens", imgs);
         intent.putExtra("pontos", pontos);
+        intent.putExtra("audio", sons);
 
         return intent;
 

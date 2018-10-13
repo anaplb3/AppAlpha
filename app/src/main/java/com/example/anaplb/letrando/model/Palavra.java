@@ -45,6 +45,8 @@ public abstract class Palavra {
 
     public abstract ArrayList<Integer> retornandoImagens();
 
+    public abstract ArrayList<Integer> retornandoAudios();
+
 
 
 }

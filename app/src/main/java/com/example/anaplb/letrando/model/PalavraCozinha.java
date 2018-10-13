@@ -21,10 +21,11 @@ public class PalavraCozinha extends Palavra{
     public ArrayList<Palavra> recursos() {
         ArrayList<String> nomes = retornandoNomes();
         ArrayList<Integer> imgs = retornandoImagens();
+        ArrayList<Integer> audio = retornandoAudios();
         ArrayList<Palavra> palavras = new ArrayList<>();
 
         for(int i = 0; i < nomes.size(); i++) {
-            Palavra p = new PalavraCozinha(nomes.get(i), imgs.get(i), 0);
+            Palavra p = new PalavraCozinha(nomes.get(i), imgs.get(i), audio.get(i));
 
             palavras.add(p);
         }
@@ -64,6 +65,25 @@ public class PalavraCozinha extends Palavra{
         imgs.add(R.drawable.torneira);
 
         return imgs;
+    }
+
+    @Override
+    public ArrayList<Integer> retornandoAudios() {
+        ArrayList<Integer> audio = new ArrayList<>();
+
+        audio.add(R.raw.colher);
+        audio.add(R.raw.faca);
+        audio.add(R.raw.fogao);
+        audio.add( R.raw.garfo);
+        audio.add(R.raw.geladeira);
+        audio.add(R.raw.mesa);
+        audio.add(R.raw.pia);
+        audio.add(R.raw.prato);
+        audio.add(R.raw.ralo);
+        audio.add(R.raw.torneira);
+
+        return audio;
+
     }
 
 }

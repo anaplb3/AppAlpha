@@ -22,10 +22,11 @@ public class PalavraComida extends Palavra{
     public ArrayList<Palavra> recursos() {
         ArrayList<String> nomes = retornandoNomes();
         ArrayList<Integer> imgs = retornandoImagens();
+        ArrayList<Integer> audio = retornandoAudios();
         ArrayList<Palavra> palavras = new ArrayList<>();
 
         for(int i = 0; i < nomes.size(); i++) {
-            Palavra p = new PalavraComida(nomes.get(i), imgs.get(i), 0);
+            Palavra p = new PalavraComida(nomes.get(i), imgs.get(i), audio.get(i));
 
             palavras.add(p);
         }
@@ -64,6 +65,25 @@ public class PalavraComida extends Palavra{
         imgs.add(R.drawable.tomate);
 
         return imgs;
+    }
+
+    @Override
+    public ArrayList<Integer> retornandoAudios() {
+        ArrayList<Integer> audio = new ArrayList<>();
+
+        audio.add(R.raw.arroz);
+        audio.add(R.raw.batata);
+        audio.add(R.raw.bolo);
+        audio.add( R.raw.carne);
+        audio.add(R.raw.feijao);
+        audio.add(R.raw.macarrao);
+        audio.add(R.raw.ovo);
+        audio.add(R.raw.peixe);
+        audio.add(R.raw.sorvete);
+        audio.add(R.raw.tomate);
+
+        return audio;
+
     }
 
 }

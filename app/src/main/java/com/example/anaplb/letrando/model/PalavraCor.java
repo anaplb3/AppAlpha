@@ -22,10 +22,11 @@ public class PalavraCor extends Palavra{
     public ArrayList<Palavra> recursos() {
         ArrayList<String> nomes = retornandoNomes();
         ArrayList<Integer> imgs = retornandoImagens();
+        ArrayList<Integer> audio = retornandoAudios();
         ArrayList<Palavra> palavras = new ArrayList<>();
 
         for(int i = 0; i < nomes.size(); i++) {
-            Palavra p = new PalavraCor(nomes.get(i), imgs.get(i), 0);
+            Palavra p = new PalavraCor(nomes.get(i), imgs.get(i), audio.get(i));
 
             palavras.add(p);
         }
@@ -64,6 +65,25 @@ public class PalavraCor extends Palavra{
         imgs.add(R.drawable.vermelho);
 
         return imgs;
+    }
+
+    @Override
+    public ArrayList<Integer> retornandoAudios() {
+        ArrayList<Integer> audio = new ArrayList<>();
+
+        audio.add(R.raw.amarelo);
+        audio.add(R.raw.azul);
+        audio.add(R.raw.branco);
+        audio.add( R.raw.laranja);
+        audio.add(R.raw.marrom);
+        audio.add(R.raw.preto);
+        audio.add(R.raw.rosa);
+        audio.add(R.raw.roxo);
+        audio.add(R.raw.verde);
+        audio.add(R.raw.vermelho);
+
+        return audio;
+
     }
 
 }

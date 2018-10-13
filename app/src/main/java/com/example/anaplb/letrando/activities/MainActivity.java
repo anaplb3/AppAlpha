@@ -18,7 +18,6 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-
     }
 
     public void botao(View v) {
@@ -27,5 +26,13 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = new Intent(getApplicationContext(), temaActivity.class);
         startActivity(intent);
         finish();
+    }
+
+    public void sair(View v) {
+        Intent intent = new Intent(Intent.ACTION_MAIN);
+        intent.addCategory(Intent.CATEGORY_HOME);
+        intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+        startActivity(intent);
+
     }
 }

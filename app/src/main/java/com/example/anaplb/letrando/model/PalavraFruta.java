@@ -1,7 +1,5 @@
 package com.example.anaplb.letrando.model;
 
-import android.annotation.SuppressLint;
-import android.os.Parcel;
 
 import com.example.anaplb.letrando.R;
 
@@ -22,10 +20,11 @@ public class PalavraFruta extends Palavra{
     public ArrayList<Palavra> recursos() {
         ArrayList<String> nomes = retornandoNomes();
         ArrayList<Integer> imgs = retornandoImagens();
+        ArrayList<Integer> audio = retornandoAudios();
         ArrayList<Palavra> palavras = new ArrayList<>();
 
         for(int i = 0; i < nomes.size(); i++) {
-            Palavra p = new PalavraFruta(nomes.get(i), imgs.get(i), 0);
+            Palavra p = new PalavraFruta(nomes.get(i), imgs.get(i), audio.get(i));
 
             palavras.add(p);
         }
@@ -65,6 +64,25 @@ public class PalavraFruta extends Palavra{
         imgs.add(R.drawable.uva);
 
         return imgs;
+    }
+
+    @Override
+    public ArrayList<Integer> retornandoAudios() {
+        ArrayList<Integer> audio = new ArrayList<>();
+
+        audio.add(R.raw.abacate);
+        audio.add(R.raw.abacaxi);
+        audio.add(R.raw.banana);
+        audio.add( R.raw.goiaba);
+        audio.add(R.raw.maca);
+        audio.add(R.raw.manga);
+        audio.add(R.raw.melancia);
+        audio.add(R.raw.morango);
+        audio.add(R.raw.pera);
+        audio.add(R.raw.uva);
+
+        return audio;
+
     }
 
 }

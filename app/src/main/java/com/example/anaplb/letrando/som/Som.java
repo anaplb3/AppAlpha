@@ -11,6 +11,7 @@ public class Som {
 
         MediaPlayer mediaPlayer = MediaPlayer.create(context, songId );
         mediaPlayer.start();
+        mediaPlayer.release();
 
     }
 }
